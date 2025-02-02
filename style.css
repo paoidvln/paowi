@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f8e8e8, #f4d6d6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.lockscreen {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pin-display {
+    font-size: 24px;
+    margin: 10px 0;
+    letter-spacing: 5px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.keypad button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #ffb6c1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.keypad button:hover {
+    background: #ff8a9e;
+}

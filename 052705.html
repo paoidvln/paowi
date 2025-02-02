@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>052705</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('https://i.gifer.com/origin/10/103c30d1f212356e3b4601589fd58e2a_w200.gif') repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .garden {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 200px;
+      background: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTVzZ2lraWtjOGtuNHByYjVqeG1odDUzNmQ5Z2NjajU5enZkYmtjdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/NSIjsFOpyjaviAnhmg/giphy.gif') repeat;
+      background-size:contain;
+      z-index: 5;
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #d84f7b;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .tulips {
+      width: 80px;
+      cursor: pointer;
+      margin: 20px 0;
+      animation: dance 1.5s infinite;
+    }
+
+    @keyframes dance {
+      0%, 100% {
+        transform: translateY(0) rotate(0);
+      }
+      25% {
+        transform: translateY(-10px) rotate(-10deg);
+      }
+      50% {
+        transform: translateY(0) rotate(10deg);
+      }
+      75% {
+        transform: translateY(10px) rotate(-5deg);
+      }
+    }
+
+    #fullLetter {
+      display: none;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+      text-align: left;
+      margin-top: 20px;
+      background: linear-gradient(to bottom, #fff, #f0d6ec);
+      border: 1px solid #d4a9ca;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: auto;
+      max-height: 200px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding: 10px;
+      display: none;
+      z-index: 2; 
+      position: relative;
+      scroll-snap-type: x mandatory;
+    }
+
+    .card {
+      width: 180px;
+      height: 180px;
+      perspective: 1000px;
+      cursor: pointer;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-front {
+      background: #ccc;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background: #ffafdc;
+      color: #ffffff;
+      transform: rotateY(180deg);
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .card-back {
+        font-size: 10px;
+      
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Valentine's Day Baby!</h1>
+    <p>Click on the tulips to read my message!</p>
+
+    <img src="https://media3.giphy.com/media/RlHseJlYXzRIq6LmC5/giphy.gif?cid=6c09b9526upptlcisw5h1lo2hwp9kyxpm9wns6ieeshi2yxl&ep=v1_stickers_search&rid=giphy.gif&ct=s" 
+         alt="Dancing Tulips" class="tulips" onclick="showLetter()">
+
+    <div id="fullLetter" class="letter">
+      <p>For Liezel</p>
+      <p>Happy Valentine’s Day.  
+
+It’s incredible how someone as beautiful as you can make such a difference in my life, kahit malayo tayo 'no. You have this rare quality, a light that shines through every word you say and every moment we share. Yung tawanan natin, every night scores that we have kapag kinikilig tayo.  
+
+Anw...
+
+What I admire most about you, besides your undeniable beauty, is your genuine heart. You make me feel seen and appreciated in ways I never thought possible, and for that, I am so grateful.  
+
+Our relationship may not have a label, but what we share feels special, real, and irreplaceable. Ang lakas ng pang aakit mo sa'kin boss HAHAHHA, something I hold close to my heart, a bond built on mutual respect, admiration, and the kind of connection that doesn’t need to be defined to be felt deeply. Feeling ko talaga God gave me a beautiful angel like you, not an actual angel ah but you look like an angel love.
+
+Even though we’re apart, please know that distance means nothing when it comes to you. I will always find time for you, always make the effort to remind you how much you mean to me. Because someone as genuine and wonderful as you deserves to feel cherished, no matter where life takes us.  
+
+Thank you for being yourself, for your laughter, your honesty, and your warmth. You are a truly rare and beautiful soul, and I’m so lucky to have you in my life, however I can.  </p>
+      <p>Forever yours, Paul</p>
+      <p>Your Valentine acccxkkkkk HAHAHAAHAH
+      </p>
+      <p>Tap the garden of tulips below baby, twice!</p>
+    </div>
+
+    <div id="cards" class="cards">
+        <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTF4cm04MWJiZnYxbTR2czI2cTNpYnA2Y3k5bml3Ymc3cmdnbDQxMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i1Y31nln84P6NJmjod/giphy.gif" alt="Image 1">
+              </div>
+              <div class="card-back">
+                <p>Happy Valentines! I know I can't be with you right now, but please take care always!</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzI2bGhhYzYxZm8zbWo5ZjdnbjM0ZGVvbG04aXlsZWZ3bTZhdm5rMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ij0ZnyDGT7kscQRgGT/giphy.gif" alt="Image 2">
+              </div>
+              <div class="card-back">
+                <p>Hi love, I just wat to remind you that you have me always!</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWk5dmNlc3FkajIxeGUxaGdwNDNmNGNwenpjZ3E0eXNyeDh3eDljayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FDbIUZLwbCUS4786z3/giphy.gif" alt="Image 3">
+              </div>
+              <div class="card-back">
+                <p>You're so Genuine love!</p>
+              </div>
+            </div>
+          </div>
+          <!-- Duplicate the cards for more -->
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa240ajNscW9pamJvaXJhZzRhMHZxc2szc3ZudHVvY2Z4M3NtcWxzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EsXa58QkvRuzTTZ7cc/giphy.gif" alt="Image 4">
+              </div>
+              <div class="card-back">
+                <p>Ang ganda ganda mo! 'wag na 'wag mong ikakahiya 'yan</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWRkYTAwc25rc25hcm9rb3UwdXUwbzZxNWx5bWd0OTR2NWxpYTh5NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TJWLyq7QOcJ8hHmfvm/giphy.gif" alt="Image 5">
+              </div>
+              <div class="card-back">
+                <p>Stay what you are lovey! And I'll stay no matter what!</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://media3.giphy.com/media/l62dOdHre9evUPFuMK/giphy.webp" alt="Image 5">
+                </div>
+                <div class="card-back">
+                  <p>kapit lang tayo sa isa't isa, gugulatin pa natin sila!</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://media4.giphy.com/media/ekswLitBUEKHxTc70h/giphy.webp" alt="Image 5">
+                </div>
+                <div class="card-back">
+                  <p>I love you so much!</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://media3.giphy.com/media/9bKN5AArXecaHyORTV/giphy.webp" alt="Image 5">
+                </div>
+                <div class="card-back">
+                  <p>Ako lang 'to ah, baka kiligin ka pa jan HAHHAAHHA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://media0.giphy.com/media/3IkH0Ch704BoApSn9r/giphy.webp" alt="Image 5">
+                </div>
+                <div class="card-back">
+                  <p>Lord! kung hindi naman po kami please ito nalang po!</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://media3.giphy.com/media/3qIzgpZiysvSBaHsNf/giphy.webp" alt="Image 5">
+                </div>
+                <div class="card-back">
+                  <p>Thank you also love, I am lucky to have you and thanks sa lahat lalong lalo na sa pag boost ng confident sa'kin, I love you!</p>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+
+  <div class="garden" onclick="toggleCards()"></div>
+
+  <script>
+    function showLetter() {
+      document.getElementById("fullLetter").style.display = "block";
+      document.querySelector(".tulips").style.display = "none";
+    }
+
+    function toggleCards() {
+      const cards = document.getElementById("cards");
+      cards.style.display = cards.style.display === "none" ? "flex" : "none";
+    }
+  </script>
+</body>
+</html>
